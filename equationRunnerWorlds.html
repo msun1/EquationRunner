@@ -1,0 +1,421 @@
+<!--Michelle Sun. IMSA 2023. 12/30/20-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Equation Runner: Worlds</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Put a favicon-->
+<link rel = "icon" href = "https://img.icons8.com/cotton/2x/like.png" type = "image/x-icon"> 
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  background-image: url("https://img.freepik.com/free-vector/pastel-bokeh-background-horizontal_25819-687.jpg?size=626&ext=jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 100px;
+  text-align: center;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 60px;
+  color: #FF98D4;
+  text-shadow: 4px 3px 2px #712AAE;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #FFA1D8 ;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: powderblue;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: pink;
+  padding: 20px;
+}
+
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #D9A1FF;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Equation Runner: Worlds</h1>
+  <p>(Visit our main webpage for more information about us.)</p>
+</div>
+
+<div class="navbar">
+  <a href="#"></a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2 style = "color: purple;text-align:center;">FAQs</h2>
+	<br>
+    <p>Q: Is Equation Runner a pricey video game?</p>
+    <p>A: Not at all. We believe everyone deserves an equal learning opportunity. Our price is around $7.00-9.50 USD. </p>
+	<br>
+	<br>
+	<p>Q: What age is Equation Runner targeting for math? </p>
+	<p>A: We are mainly targeting middle schoolers because the skills taught are Algebra 1/2, Geometry, and other applications.</p>
+	<br>
+	<br>
+	<p>Q: Does it matter if the player is female or male?</p>
+	<p>A: No, this definitely does not affect the teaching part or the gaming part of Equation Runner. As long as the player has an interest in math or video games, then they would be an amazing candidate!</p>
+	<br>
+	<br>
+	<p>Q: Do you have to be good at video gaming to learn math in Equation Runner?</p>
+	<p>A: In our game, we definitely do not require the player to be a pro at gaming to play or learn. We also have clear instructions and explanations at the beginning of each level/world; what’s more is that we have office hours for your service if you still have questions (just call 309-210-7552)!</p>
+  </div>
+  
+<div class="main">
+<h2 style = "text-align:center">CANDYVILLE</h2>
+
+<div id="slideshow1" class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://i.pinimg.com/originals/90/e4/1f/90e41f31ebf8f8102b600eca014e4a89.jpg" style="width:75%; margin-left: 120px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://st2.depositphotos.com/4260417/7991/v/950/depositphotos_79915468-stock-illustration-seamless-cartoon-candy-land.jpg" style="width:75%; margin-left: 120px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://i.pinimg.com/736x/c1/02/61/c10261d36104a61f83b0c59db594ecfd.jpg" style="width:75%; margin-left: 120px">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1,slideshow1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1, slideshow1)">&#10095;</a>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1, slideshow1)"></span> 
+  <span class="dot" onclick="currentSlide(2, slideshow1)"></span> 
+  <span class="dot" onclick="currentSlide(3, slideshow1)"></span> 
+</div>
+</div>
+<h4>Description:</h4>
+<p>CandyVille is the first world that the player faces. The setting is roads filled with candy and sweets; it’s your typical candy crush gaming background and mood. For the gaming type, it’s a running game where the player manipulates a runner on screen to go through a certain amount of levels without answering any of the questions incorrectly. The player has to answer three math questions to pass obstacles. These questions are basic and quick calculation problems. If they answer correctly, they get a quick bonus power. But if they answer incorrectly, they will be put back at the start (in other words, they’ll “die”).</p>
+<h4>Purpose:</h4>
+<p>The reason why the setting is candy and the mood is set like Candy Crush is because it allows the player to feel lighthearted and warm when playing. Equation Runner is meant to be a casual yet effective teaching strategy through video gaming.</p>
+<h4>Skills:</h4>
+<p>This world tests repetition and various critical thinking skills in algebra, geometry, and middle school math. Problems include solving simple algebraic equations, finding geometric relationships between shapes, geometry proofs, and some simple word problems dealing with interest.</p>
+
+<br><br>
+	
+	
+<h2 style = "text-align:center">GALAXYSPACE</h2>
+<div id="slideshow2" class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://media.istockphoto.com/vectors/galaxy-space-view-with-planets-and-stars-in-background-cartoon-vector-id1216504735?k=6&m=1216504735&s=170667a&w=0&h=Q566_O2V30dxDtgADYqW2b5Br8HEIyysw_HfqJLpbCE=" style="width:65%; margin-left: 160px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://static.vecteezy.com/system/resources/previews/000/672/539/non_2x/vector-cartoon-astronauts-floating-in-the-galaxy-with-a-sparkling-star-background.jpg" style="width:65%; margin-left: 160px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://static.vecteezy.com/system/resources/previews/000/278/168/non_2x/galaxy-background-rocket-flying-vector.jpg" style="width:65%; margin-left: 160px">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
+<a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(2, slideshow2)"></span> 
+  <span class="dot" onclick="currentSlide(3, slideshow2)"></span> 
+</div>
+</div>
+<br>
+<h4>Description:</h4>
+<p>GalaxySpace is the next world; as the name suggests, the setting is in outer space with stars, planets, aliens, and spaceships as some examples of obstacles. Like CandyVille, the player must manipulate a runner to jump and pass through obstacles to successfully finish levels. </p>
+<h4>Purpose:</h4>
+<p>The reason Equation Runner has the second world in outer space is because it teaches players that outer space isn’t just a vacuum without life or possibilities. It develops the player’s interest in space exploration, which may be used in various scientific fields.</p>
+<h4>Skills:</h4>
+<p>This world also tests repetition and various critical thinking skills in algebra, geometry, and middle school math. Problems include solving simple algebraic equations, finding geometric relationships between shapes, geometry proofs, and some simple word problems dealing with interest. At each checkpoint, there will be a calculation problem and a word problem. Compared to those of CandyVille, these problems are more difficult and require more work, but their general ideas are similar.</p>
+	
+<br><br>
+
+<h2 style = "text-align:center">WATERSPROUT</h2>
+<div id="slideshow3" class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://image.freepik.com/free-vector/beach-cartoon-illustration_1196-552.jpg" style="width:65%; margin-left: 160px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://i.pinimg.com/originals/7f/0e/3f/7f0e3f0d2ad0b41b24e3deb7e5465ece.jpg" style="width:65%; margin-left: 160px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://thumbs.dreamstime.com/b/cartoon-spring-nature-landscape-template-cartoon-spring-nature-landscape-template-waterfall-mountains-river-hills-green-trees-109886714.jpg" style="width:65%; margin-left: 160px">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1,slideshow3)">&#10094;</a>
+<a class="next" onclick="plusSlides(1, slideshow3)">&#10095;</a>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(2, slideshow3)"></span> 
+  <span class="dot" onclick="currentSlide(3, slideshow3)"></span> 
+</div>
+</div>
+
+<script>
+var slideshow1 = document.getElementById("slideshow1");
+slideshow1.currentSlideIndex = 1;
+showSlides(slideshow1.currentSlideIndex, slideshow1);
+
+var slideshow2 = document.getElementById("slideshow2");
+slideshow2.currentSlideIndex = 1;
+showSlides(slideshow2.currentSlideIndex, slideshow2);
+
+var slideshow3 = document.getElementById("slideshow3");
+slideshow3.currentSlideIndex = 1;
+showSlides(slideshow3.currentSlideIndex, slideshow3);
+
+function plusSlides(n, slideshow) {
+  showSlides(slideshow.currentSlideIndex += n, slideshow);
+}
+
+function currentSlide(n, slideshow) {
+  showSlides(slideshow.currentSlideIndex = n, slideshow);
+}
+
+function showSlides(n, slideshow) {
+  
+
+
+  var i;
+  var slides = slideshow.getElementsByClassName("mySlides");
+  var dots = slideshow.getElementsByClassName("dot");
+  if (n > slides.length) {slideshow.currentSlideIndex = 1}    
+  if (n < 1) {slideshow.currentSlideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideshow.currentSlideIndex-1].style.display = "block";  
+  dots[slideshow.currentSlideIndex-1].className += " active";
+}
+
+</script>
+
+<h4>Description:</h4>
+<p>If the player has reached WaterSprout, then that means they’ve mastered most middle school mathematics and is ready for Algebra 2 and Advanced Geometry. WaterSprout has a setting of mostly water, forests, beaches, and sunshine. The player has to use a runner to not only pass through roads, but they also have to defeat enemies in this level. In both cases, they must answer harder math questions that require memorization and critical thinking skills.</p>
+<h4>Purpose:</h4>
+<p>Equation Runner has it’s last world in a place where there’s water and nature because it subtly teaches the player to treasure Earth’s environment and how beautiful it actually is. This means it potentially lets the player learn about climate change or global warming.</p>
+<h4>Skills:</h4>
+<p>The skills here are more complex and require the player to know how to apply the basic algebraic manipulations to word problems. Mathematics in Algebra 2, Advanced geometry, and applications (such as projectile motion or compounded interest) are in use.</p>
+<br><br>
+
+<img style = "margin-left:50px; width:300px" src = "https://cdn.glitch.com/7e3ab1a1-617a-4b6a-9b32-a6aef4d68913%2Fswirl-pic2%20(2).png?v=1597336098624" alt = "border">
+<img style = "margin-left:40px; width:70px; height:150px" src = "https://cdn.glitch.com/7e3ab1a1-617a-4b6a-9b32-a6aef4d68913%2Fbook-gif(2).gif?v=1597335526079">
+<img style = "margin-left:50px; width:300px" src = "https://cdn.glitch.com/7e3ab1a1-617a-4b6a-9b32-a6aef4d68913%2Fswirl-pic2.png?v=1597336101973">
+
+	<br><br><br>
+    <h2 style = "text-align: center"><i>A Message From Our Team</i></h2>
+    <p>“Unprecedented” is probably a word that you’ve heard just about everywhere in 2020. During this time, we, as the creators of Equation Runner, believe that it’s crucial to understand the importance of educating and taking care of yourself. Whether it’s playing video games to studying the next set of SAT books, we always have your back. If you or anyone you know like to play video games and also want to improve their mathematical or critical thinking skills, then Equation Runner might just be the sunlight during this cloudy year. :)</p>
+	</div>
+</div>
+
+<div class="footer">
+  <h5>Endnote</h5>
+  <p><i>Please note that Equation Runner is not actually a published video game. It is an idea created by Michelle Sun for a school activity.</i></p>
+</div>
+
+</body>
+</html>

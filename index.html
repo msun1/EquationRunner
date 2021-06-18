@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<!--Michelle Sun. IMSA 2023. 12/26/20-->
+<!--This is an HTML/CSS website for a game called Equation Runner (created on Roblox).-->
+
+<html>
+<head>
+<title>Equation Runner</title>
+
+<!--Put a favicon-->
+<link rel = "icon" href = "https://is3-ssl.mzstatic.com/image/thumb/Purple124/v4/a2/db/fb/a2dbfb42-5099-9ac9-8318-840147efb200/source/512x512bb.jpg" 
+type = "image/x-icon"> 
+
+
+<style>
+/*Universal selector*/
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Comic Sans MS;
+  margin: 0;
+  text-align: center;
+  color:#B70093;
+}
+
+/*Style the top navigation bar*/
+.navbar {
+  overflow: hidden;
+  background-color: #96005D;
+}
+
+	/*Style the navigation bar links*/
+	.navbar a {
+	  float: left;
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 20px;
+	  text-decoration: none;
+	  transition: all 0.5s;
+	}
+	
+	.logo{
+      font-size:22px;
+	}
+	.animalBar{
+	  font-size:20px;
+	}
+	.adoptBar{
+	  font-size:20px;
+	}
+	#moreInfo{
+	  font-size:20px;
+	}
+	.dropdown-content{
+	  font-size:15px;	
+	}
+	.right{
+	  font-size:20px;
+	}
+
+	/*Right-aligned link*/
+	.navbar a.right {
+	  float: right;
+	}
+	/*Change color on hover*/
+	.navbar a:hover {
+	  background-color: pink;
+	  color: blue;
+	}
+
+	/*style the dropdown button*/
+	.dropdown {
+	  float: left;
+	  overflow: hidden;
+	}
+
+	.dropdown .dropbtn {
+	  font-size: 16px;  
+	  border: none;
+	  outline: none;
+	  color: white;
+	  padding: 14px 16px;
+	  background-color: inherit;
+	  font-family: inherit;
+	  margin: 0;
+	}
+
+	.navbar .dropbtn :hover, .dropdown:hover .dropbtn {
+	  background-color: powderblue;
+	  color: black;
+	  transition: all 0.5s;
+	}
+
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+
+	.dropdown-content a {
+	  float: none;
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.dropdown-content a:hover {
+	  background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+
+
+
+/*The header image/color*/
+.header {
+  background-image: url("https://venturebeat.com/wp-content/uploads/2019/12/roblox-Adopt-Me-1.jpg?resize=1024%2C576&strip=all");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 143px;
+  color: #DA3AAC;
+}
+
+/*Font style of the heading text*/
+.header h1 {
+  font-size: 60px;
+  color: pink;
+  text-shadow: 4px 3px 2px #712AAE;
+}
+
+/*Make two unequal columns that are next to each other
+ Sidebar/left column*/
+.side {
+  flex: 30%;
+  background-color: transparent;
+  padding: 20px;
+}
+
+
+/*Main column*/
+.main {   
+  flex: 70%;
+  background-color: transparent;
+  padding: 5%;
+}
+
+
+/*image styling; images are either from pixabay or belong to me*/
+.dogHome {  
+  float: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 30%;
+  border: 3px solid powderblue;
+  border-radius: 5px;
+  padding: 0.5%;
+}
+
+.vetShelter {
+  float:right;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 30%;
+  border: 3px solid powderblue;
+  border-radius: 5px;
+  padding: 0.5%;
+}
+
+/*style the See Our Animals button on the home page*/
+.seeOurAnimals {
+  background-color: #D189FF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border: 4px double #cccccc;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: all 0.5s;
+  margin: 5px;
+  width: 200px;
+}
+
+.seeOurAnimals:hover {
+   background-color: #8FEDD7;
+}
+
+.importantHead {
+   margin-left: 420px;
+}
+.importantHead p{
+  float:left;
+}
+
+/*Image styling*/
+.catHome {
+  display: block;
+  margin-right: auto;
+  width: 30%;
+  height: 30%;
+  border: 3px solid purple;
+  border-radius: 5px;
+  padding: 10px;
+  float:left;
+}
+
+.guineaHome {
+  display: block;
+  margin-left: auto;
+  width: 30%;
+  height: 30%;
+  border: 3px solid powderblue;
+  border-radius: 5px;
+  padding: 10px;
+  float:right;
+}
+
+/*style the Donate Now button on the home page*/
+.donate {
+  background-color: #D189FF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border: 4px double #cccccc;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: all 0.5s;
+  width: 200px;
+}
+.donate:hover {
+   background-color: #8FEDD7;
+}
+
+/*Adding a sunset image to represent the Santa Cruz Beach in California ("Where are we?" section)*/
+.sunImg {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 30%;
+  height: 30%;
+  border: 3px solid green;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/*homepage background*/
+.homePage .paws {
+   background-image: url("https://www.mfcreative.co.uk/wp-content/uploads/2015/06/Pink-Arrows.jpg");
+   background-size: cover;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+}
+
+/*style the staff pledge button*/
+.button {
+  width: 600px;
+  height: 150px;
+  background-color: #FF82A8;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-family: "Georgia", serif;
+}
+.pinkButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+</style>
+</head>
+
+
+<body>
+
+<!--this is the text that goes in the header-->
+<div class="header">
+  <h1>Equation Runner</h1>
+  <h3 style = "color: white">By: Michelle Sun</h3>
+</div>
+
+<!--This is my navigation bar-->
+<div class="navbar">
+  <a href="index.html" class="logo"> </a>
+</div>
+
+<div class="homePage">
+ <div class = "paws">
+  <div class="side">
+  <br>
+    <h2>OUR GAME 😎</h2>
+	<p>Equation Runner is your usual fun and exciting running video game, but what’s different is that your child will actually learn from this educational program while enjoying themselves! There are a total of 3 “worlds,” with 200 levels per each. The levels start out to be simple and straightforward, but as the game progresses, the difficulty begins to increase, going from basic 5th grade math all the way to Algebra 2 and a little bit of trigonometry (8th grade math). </p>
+		<!--adding a button that takes the viewer to the worlds page-->
+	<form action = "equationRunnerWorlds.html">
+        <input class = "seeOurAnimals" type="submit" value="Worlds">
+	</form>
+	
+	<p>There are a total of 600 levels, each testing the player’s familiarity and accuracy at answering the problems. If they’ve answered correctly, they get a power booster, but if they’re incorrect, they will, unfortunately, need to restart the level but are also given a thorough explanation of the missed problem. Once they’ve reached the final level, there is a printable certificate and a virtual treasure chest. Moreover, realizing it or not, they will have already mastered a good amount of middle school math including Algebra 1 & 2!</p>
+	<br>
+   
+ <!--adding the first two images-->
+    <img class = "dogHome" src = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d63f6a7f-6cad-45b5-86b1-a722c2b85990/dclaljh-f6c5feb9-432a-4a14-9387-90478bb59a08.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZDYzZjZhN2YtNmNhZC00NWI1LTg2YjEtYTcyMmMyYjg1OTkwXC9kY2xhbGpoLWY2YzVmZWI5LTQzMmEtNGExNC05Mzg3LTkwNDc4YmI1OWEwOC5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.6ZbXIunTK7bsEVVh7yyTHHJXXM8iOlowzrpaMZnUdJU"> 
+    <img class = "vetShelter" src = "https://devforum.roblox.com/uploads/default/original/4X/b/0/9/b09d8a1c0c8bfb51c16210ef3ba393998041c525.gif">
+    
+	<p><br><br>Displayed on the left is one of our math team victories. These children met up over the internet and completed numerous levels together.<br><br>On the right is one of our newer players enjoying his character.</p>
+    
+	<!--adding a download button-->
+	<form action = "https://www.apple.com/app-store/">
+        <input class = "seeOurAnimals" type="submit" value="Download Now">
+	</form>
+		<br>
+		<br>
+		<br>
+		
+   <!--the staff pledge button-->
+  <button class="button pinkButton"><i>"We, as the certified staff of Equation Runner, will make sure to allow for a positive and safe learning environment and make sure our customers are satisfied." </i></button>
+	<br><br><br><br>
+		
+  <h3 class = "importantHead">OUR THEME</h3>
+	<img class = "catHome" src = "https://themeshaper.files.wordpress.com/2013/10/theme-shaper-cloud1.png?w=846"> 	
+	<p>What is a theme? Its formal definition is the central topic/subject or message of a game or literary work. For us, the theme is what a video game is built around and what it’s conveying to the players. We value our customers’ time and energy, so we have programmed Equation Runner to be one of the most effective and entertaining educational games in 2020.</p>
+	<p>Even though this is an educational platform, we take your child’s interests and love for gaming into consideration. In the context of our theme, Equation Runner is built around math skills and obstacle courses, which are two main components in our goal of learning with a positive attitude. We’re trying to convey the message that anyone, as long as they put in the time and effort, can master these mathematical concepts.</p>
+	<br><br><br><br>
+	
+	<h3 style = "margin-right: 420px">OUR CHARACTERS</h3>
+	<img class = "guineaHome" src = "https://lumiere-a.akamaihd.net/v1/images/eu_incredibles-2_article_hero_mtop_x_8d0cded7.jpeg?region=0,0,938,835">
+	<br><br>
+	<p>In every movie, book, story, or game, one of the most important aspects is the characters. Characters help to shape the entire meaning of the story or game because they give a sense of what its purpose or theme is. In most typical video games, there are pre-assigned avatars that players can choose from and they may or may not change as they pass more levels. However, we, as the producing team of Equation Runner, have made sure that this game is not only educational, but it also allows teens (or the players) to freely express themselves.</p>
+	<p>In Equation Runner, the players can customize their avatar(s) to look like themselves, their friends, family members, etc. From the hair color to what shoes their character(s) wear, it’s all customizable. It’s all very lenient, so the player can freely use their imagination to create their video gaming world and character(s). One main purpose of why we chose to do this is because if players think that their avatar really is them, then it serves as a powerful motivation to push themselves to their best.</p>
+  </div>
+ 
+  <div class="main">
+    <h2>OUR SUBJECT: Why Math?</h2>
+	<div>
+		<img class = "sunImg" src = "https://miro.medium.com/max/4800/1*IHS7cxLslUlPfPAqsI-2kQ.png">
+	</div>
+	<br>
+	<p>Mathematics is the <i> methodical application of matter </i> because math makes people more methodical or systematic, and keeps our lives orderly and free of chaos. The power of reasoning, creativity, abstract or spatial thinking, critical thinking, problem-solving ability and even effective communication skills are all results of learning math.</p>
+	<p>Mathematics is the start of, literally, <b> everything!</b> Without it, the world wouldn’t be able to move forward or even function. Math is used everywhere in our daily lives; a cook or a farmer, a carpenter or a mechanic, a shopkeeper or a doctor, an engineer or a scientist, a musician or a magician, everyone needs mathematics. (Even insects use mathematics in their everyday life for existence!)</p>
+	<p>Therefore, we chose Equation Runner as a math based video game to teach kids that learning can definitely be enjoyable.</p>
+	<br><br>
+
+    <h2>OUR GOAL</h2>
+	<div>
+		<img class = "sunImg" src = "https://media3.giphy.com/media/RGRCsWPwFS5MzHn7pj/giphy.gif">
+	</div>
+	<br>
+	<p>Our goal is to successfully have the player master their math skills ranging from middle school calculation problems all the way to Algebra 2/Trig critical thinking word problems.</p>
+	<p>We are mainly targeting middle school students who are looking for an entertaining game to pass time but also to master their math skills. There aren’t any specific requirements for this game; as long as your child has an interest in math or gaming, we highly recommend this program!</p>
+  	<br><br>
+	
+	<h2>Why Should You Choose Us?</h2>
+	<div>
+		<img class = "sunImg" src = "https://www.activemore.com/wp-content/uploads/2019/10/why-choose-us-banner-740x450.jpg">
+	</div>
+	<br>
+	<p>By combining video games with mathematics, we have created the perfect solution for middle school students wanting to succeed in academics. Equation Runner helps your child to think mathematically in real world situations, and they will receive thorough problem explanations at every level to make sure they understand the concepts taught. Our program not only helps students to master math skills, but it also allows them to collaborate with others who also have a liking to video games and math. </p>
+	<p>Our customers are very satisfied with what we’ve created and their reviews have shown it. We always put forth our best effort to help better the gaming system to make it more effective in teaching kids. Nevertheless, our main goal is to see children actually learning and having fun, so we hope that we will be with them along the way of realizing their dreams.</p>
+  	<br><br>
+
+
+    <h1>REVIEWS 💖</h1>
+    <h5><i>Updated December 28th, 2020</i></h5>
+	
+	<!--These are the top reviews-->
+	<p>Natalia Banks: ⭐⭐⭐⭐⭐</p>
+	<p><i>"I recently bought this for my 11-year-old, and I have to say I love their service and how patient the staff is, especially during the pandemic. (Not to mention how great this game was!) In the future, I will definately adopt from here again!"</i></p>
+	<p>Phyllis Yuan: ⭐⭐⭐</p>
+	<p><i>"The service is nice, but when I bought the gaming console, the quality was a little poor. Overall, it was fine."</i></p>
+	<p>Nicole Swanson: ⭐⭐⭐⭐⭐</p>
+	<p><i>"Amazing place! Love all their games!"</i></p>  
+	<p>Barret Hopkins: ⭐⭐⭐⭐⭐</p>
+	<p><i>"All their products are so effective and entertaining! I purchased Equation Runner a while back and I definately do not regret my decision. </i></p>
+	<p>Heewoon Koh: ⭐⭐⭐⭐</p>
+	<p><i>Good place and service. Bought Equation Runner for a good price.</i></p>
+	<br><br>
+	<br>
+    <h2>CONTACT US</h2>
+	<h4><i>Our phone: 309-210-7552</i></h4>
+	<h4><i>Our email: equationrunner31@gmail.com</i></h4>
+	<p>Please enter your question or feedback below and we'll get back to you as soon as possible. Thank you!</p>
+	
+	<style>
+#email{
+  width:1100px;
+  height: 40px;
+}
+
+.row .column {
+   width:100%;
+   background-color: transparent;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.row:after {
+  display: table;
+  clear: both;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+	</style>
+	
+	
+  <!--Form content-->
+  <div class="row">
+    <div class="column">
+      <form action="equationRunner.html">
+        <label for="fname">First Name</label>
+        
+		<input type="text" id="fname" name="firstname" placeholder="Your first name...">
+        <label for="lname">Last Name</label><br>
+		
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+			  
+		<label for="email">Email</label><br>
+		<input type="email" id="email" name="email" placeholder ="Your email address..."><br><br>
+
+	   <label for="country">Country</label>
+      
+	  <select id="country" name="country">
+		  <option value="europe"> Europe </option>
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+      </select>
+	  
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.."></textarea>				
+   </div>
+
+<!--Submit button-->
+		<input style = "  
+		  background-color: #7b38d8;
+		  color: white;
+		  padding: 12px 20px;
+		  border: none;
+		  cursor: pointer;
+		  border: 4px double #cccccc;
+		  border-radius: 20px;
+		  font-size: 15px;
+		  transition: all 0.5s;
+		  margin: 5px;
+		  width: 140px;" class = "submit" type="submit" value="Submit">
+		<br><br><br><br>
+      </form>
+  </div>
+</div>
+	
+	
+	
+	
+  </div>
+</div>
+
+</body>
+</html>
